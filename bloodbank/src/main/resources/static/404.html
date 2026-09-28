@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Blood Bank | Page Not Found</title>
+
+    <link rel="stylesheet" href="css/style.css">
+
+    <style>
+        .error-page {
+            min-height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            padding: 30px;
+            background: #f6f7f9;
+        }
+
+        .error-card {
+            width: 100%;
+            max-width: 520px;
+            padding: 45px 35px;
+            text-align: center;
+            background: #ffffff;
+            border: 1px solid #e5e6e9;
+            border-radius: 14px;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+        }
+
+        .error-image {
+            width: 210px;
+            height: 210px;
+            object-fit: contain;
+            margin: 0 auto 20px;
+        }
+
+        .error-code {
+            margin-bottom: 5px;
+            color: #a51f35;
+            font-size: 64px;
+            line-height: 1;
+            font-weight: 700;
+        }
+
+        .error-card h1 {
+            margin-bottom: 10px;
+            color: #292c32;
+            font-size: 25px;
+        }
+
+        .error-card p {
+            max-width: 390px;
+            margin: 0 auto 25px;
+            color: #777b84;
+            font-size: 14px;
+        }
+
+        .error-actions {
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        @media (max-width: 480px) {
+
+            .error-page {
+                padding: 18px;
+            }
+
+            .error-card {
+                padding: 35px 22px;
+            }
+
+            .error-image {
+                width: 170px;
+                height: 170px;
+            }
+
+            .error-code {
+                font-size: 52px;
+            }
+
+            .error-card h1 {
+                font-size: 21px;
+            }
+
+            .error-actions {
+                flex-direction: column;
+            }
+
+            .error-actions button {
+                width: 100%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+<main class="error-page">
+
+    <section class="error-card">
+
+        <img
+                src="images/404-illustration.png"
+                alt="Page Not Found"
+                class="error-image"
+        >
+
+        <div class="error-code">
+            404
+        </div>
+
+        <h1>
+            Page Not Found
+        </h1>
+
+        <p>
+            The page you are looking for does not exist
+            or may have been moved.
+        </p>
+
+        <div class="error-actions">
+
+            <button
+                    type="button"
+                    class="primary-button"
+                    onclick="goToDashboard()"
+            >
+                Go to Dashboard
+            </button>
+
+            <button
+                    type="button"
+                    class="secondary-button"
+                    onclick="goBack()"
+            >
+                Go Back
+            </button>
+
+        </div>
+
+    </section>
+
+</main>
+
+
+<script>
+
+    function goToDashboard() {
+        window.location.href = "dashboard.html";
+    }
+
+    function goBack() {
+        window.history.back();
+    }
+
+</script>
+
+</body>
+</html>

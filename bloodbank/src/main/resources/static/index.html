@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta
+            name="viewport"
+            content="width=device-width, initial-scale=1.0"
+    >
+
+    <title>Blood Bank | Login</title>
+
+    <link
+            rel="stylesheet"
+            href="css/style.css"
+    >
+
+    <link
+            rel="stylesheet"
+            href="css/components.css"
+    >
+
+</head>
+
+
+<body class="login-page">
+
+
+<div class="login-container">
+
+
+    <!-- =========================
+         LEFT VISUAL SECTION
+         ========================= -->
+
+    <section class="login-visual">
+
+        <div class="login-visual-content">
+
+            <img
+                    src="images/blood-bank-logo.png"
+                    alt="Blood Bank Logo"
+                    class="login-logo">
+
+            <h1>
+                Blood Bank
+            </h1>
+
+            <p>
+                Blood Inventory and Donor
+                Eligibility Tracker
+            </p>
+
+        </div>
+
+    </section>
+
+
+    <!-- =========================
+         LOGIN SECTION
+         ========================= -->
+
+    <section class="login-card-wrapper">
+
+        <div class="login-card">
+
+            <img
+                    src="images/icons/blood-drop.png"
+                    alt="Blood Drop"
+                    class="login-card-icon">
+
+
+            <h2>
+                Welcome Back
+            </h2>
+
+            <p class="login-card-subtitle">
+                Sign in to manage blood bank records.
+            </p>
+
+
+            <!-- Login Form -->
+
+            <form id="loginForm">
+
+
+                <!-- Error message will appear here -->
+
+                <div
+                        id="loginError"
+                        class="form-error"
+                        style="display: none;"
+                ></div>
+
+
+                <!-- Email -->
+
+                <div class="form-group">
+
+                    <label for="email">
+                        Email Address
+                    </label>
+
+                    <input
+                            type="email"
+                            id="email"
+                            name="email"
+                            placeholder="Enter your email"
+                            autocomplete="email"
+                    >
+
+                </div>
+
+
+                <!-- Password -->
+
+                <div class="form-group">
+
+                    <label for="password">
+                        Password
+                    </label>
+
+                    <input
+                            type="password"
+                            id="password"
+                            name="password"
+                            placeholder="Enter your password"
+                            autocomplete="current-password"
+                    >
+
+                </div>
+
+
+                <!-- Login Options -->
+
+                <div class="login-options">
+
+                    <label class="remember-me">
+
+                        <input
+                                type="checkbox"
+                                id="rememberMe"
+                                name="rememberMe"
+                        >
+
+                        <span>
+                            Remember me
+                        </span>
+
+                    </label>
+
+
+                    <a
+                            href="#"
+                            class="forgot-link"
+                            onclick="return false;"
+                    >
+                        Forgot password?
+                    </a>
+
+                </div>
+
+
+                <!-- Login Button -->
+
+                <button
+                        type="submit"
+                        class="primary-button login-button"
+                >
+                    Sign In
+                </button>
+
+
+            </form>
+
+        </div>
+
+    </section>
+
+</div>
+
+
+<!-- Login JavaScript -->
+
+<script src="js/login.js"></script>
+
+</body>
+</html>

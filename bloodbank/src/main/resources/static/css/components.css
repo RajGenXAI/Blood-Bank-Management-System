@@ -1,0 +1,486 @@
+/* =========================================================
+   BLOOD BANK MANAGEMENT SYSTEM
+   Reusable UI Components
+   ========================================================= */
+
+
+/* =========================
+   TOAST NOTIFICATIONS
+   ========================= */
+
+.toast-container {
+    position: fixed;
+    top: 22px;
+    right: 22px;
+    z-index: 1000;
+
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+
+    width: min(360px, calc(100% - 32px));
+}
+
+.toast {
+    display: flex;
+    align-items: flex-start;
+    gap: 12px;
+
+    padding: 14px 16px;
+
+    background: #ffffff;
+    border: 1px solid #e4e5e8;
+    border-left: 4px solid #a51f35;
+    border-radius: 9px;
+
+    box-shadow: 0 10px 28px rgba(0, 0, 0, 0.12);
+
+    animation: toastSlideIn 0.25s ease;
+}
+
+.toast-content {
+    flex: 1;
+}
+
+.toast-title {
+    margin-bottom: 2px;
+    color: #292c32;
+    font-size: 13px;
+    font-weight: 700;
+}
+
+.toast-message {
+    color: #777b84;
+    font-size: 12px;
+}
+
+.toast-close {
+    width: 24px;
+    height: 24px;
+
+    border: none;
+    border-radius: 5px;
+
+    background: transparent;
+    color: #777b84;
+
+    font-size: 18px;
+    line-height: 1;
+}
+
+.toast-close:hover {
+    background: #f2f2f3;
+}
+
+.toast.success {
+    border-left-color: #31845a;
+}
+
+.toast.error {
+    border-left-color: #a51f35;
+}
+
+.toast.warning {
+    border-left-color: #b18116;
+}
+
+.toast.info {
+    border-left-color: #4773a8;
+}
+
+@keyframes toastSlideIn {
+    from {
+        opacity: 0;
+        transform: translateX(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateX(0);
+    }
+}
+
+
+/* =========================
+   LOADING INDICATOR
+   ========================= */
+
+.loading-overlay {
+    position: fixed;
+    inset: 0;
+
+    z-index: 900;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    background: rgba(255, 255, 255, 0.72);
+}
+
+.loading-card {
+    min-width: 180px;
+
+    padding: 22px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    background: #ffffff;
+    border: 1px solid #e5e6e9;
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+.loading-spinner {
+    width: 34px;
+    height: 34px;
+
+    border: 3px solid #eeeeef;
+    border-top-color: #a51f35;
+    border-radius: 50%;
+
+    animation: loadingSpin 0.8s linear infinite;
+}
+
+.loading-text {
+    color: #656970;
+    font-size: 12px;
+    font-weight: 600;
+}
+
+@keyframes loadingSpin {
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+
+/* =========================
+   PAGE LOADING
+   ========================= */
+
+.page-loading {
+    min-height: 220px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.page-loading-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+
+    color: #777b84;
+    font-size: 13px;
+}
+
+.page-loading-content .loading-spinner {
+    width: 30px;
+    height: 30px;
+}
+
+
+/* =========================
+   EMPTY SEARCH STATE
+   ========================= */
+
+.search-empty-state {
+    padding: 45px 20px;
+
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    text-align: center;
+}
+
+.search-empty-state img {
+    width: 115px;
+    height: 115px;
+
+    object-fit: contain;
+
+    margin-bottom: 14px;
+}
+
+.search-empty-state h3 {
+    margin-bottom: 5px;
+
+    color: #44474e;
+    font-size: 16px;
+}
+
+.search-empty-state p {
+    color: #888c94;
+    font-size: 12px;
+}
+
+
+/* =========================
+   AVATAR
+   ========================= */
+
+.user-avatar {
+    width: 38px;
+    height: 38px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    border-radius: 50%;
+
+    background: #f8e9ec;
+    color: #a51f35;
+
+    font-size: 13px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   BLOOD GROUP BADGE
+   ========================= */
+
+.blood-group-badge {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+
+    min-width: 40px;
+    min-height: 27px;
+
+    padding: 4px 8px;
+
+    border-radius: 6px;
+
+    background: #f8e9ec;
+    color: #9e1e34;
+
+    font-size: 11px;
+    font-weight: 700;
+}
+
+
+/* =========================
+   DATE / META TEXT
+   ========================= */
+
+.meta-text {
+    color: #858991;
+    font-size: 11px;
+}
+
+.muted-text {
+    color: #90939a;
+}
+
+
+/* =========================
+   ACTION GROUP
+   ========================= */
+
+.action-group {
+    display: flex;
+    align-items: center;
+    gap: 6px;
+    flex-wrap: wrap;
+}
+
+.action-button {
+    min-height: 32px;
+
+    padding: 5px 10px;
+
+    border: 1px solid #dedfe3;
+    border-radius: 6px;
+
+    background: #ffffff;
+    color: #62666e;
+
+    font-size: 11px;
+    font-weight: 600;
+
+    transition:
+            background 0.2s ease,
+            border-color 0.2s ease,
+            color 0.2s ease;
+}
+
+.action-button:hover {
+    background: #f6f6f7;
+}
+
+.action-button.primary {
+    background: #a51f35;
+    border-color: #a51f35;
+    color: #ffffff;
+}
+
+.action-button.primary:hover {
+    background: #8f182c;
+}
+
+.action-button.danger:hover {
+    background: #fff7f8;
+    border-color: #d9aeb6;
+    color: #a51f35;
+}
+
+
+/* =========================
+   SECTION DIVIDER
+   ========================= */
+
+.section-divider {
+    width: 100%;
+    height: 1px;
+
+    margin: 20px 0;
+
+    background: #eeeeef;
+}
+
+
+/* =========================
+   SMALL LABEL
+   ========================= */
+
+.small-label {
+    display: inline-block;
+
+    margin-bottom: 5px;
+
+    color: #858991;
+
+    font-size: 10px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+}
+
+
+/* =========================
+   TOOLTIP
+   ========================= */
+
+.tooltip {
+    position: relative;
+}
+
+.tooltip::after {
+    content: attr(data-tooltip);
+
+    position: absolute;
+
+    left: 50%;
+    bottom: calc(100% + 8px);
+
+    transform: translateX(-50%);
+
+    padding: 6px 8px;
+
+    border-radius: 5px;
+
+    background: #292c32;
+    color: #ffffff;
+
+    font-size: 10px;
+
+    white-space: nowrap;
+
+    opacity: 0;
+    visibility: hidden;
+
+    pointer-events: none;
+
+    transition:
+            opacity 0.2s ease,
+            visibility 0.2s ease;
+}
+
+.tooltip:hover::after {
+    opacity: 1;
+    visibility: visible;
+}
+
+
+/* =========================
+   CONFIRMATION BOX
+   ========================= */
+
+.confirm-box {
+    padding: 20px;
+
+    background: #ffffff;
+
+    border: 1px solid #e5e6e9;
+    border-radius: 10px;
+
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.10);
+}
+
+.confirm-box h3 {
+    margin-bottom: 7px;
+
+    color: #292c32;
+    font-size: 17px;
+}
+
+.confirm-box p {
+    color: #777b84;
+    font-size: 13px;
+}
+
+.confirm-actions {
+    margin-top: 18px;
+
+    display: flex;
+    justify-content: flex-end;
+    gap: 9px;
+}
+
+
+/* =========================
+   MOBILE
+   ========================= */
+
+@media (max-width: 600px) {
+
+    .toast-container {
+        top: 12px;
+        right: 12px;
+        left: 12px;
+
+        width: auto;
+    }
+
+    .toast {
+        width: 100%;
+    }
+
+    .action-group {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .action-button {
+        width: 100%;
+    }
+
+    .confirm-actions {
+        flex-direction: column-reverse;
+    }
+
+    .confirm-actions button {
+        width: 100%;
+    }
+}
